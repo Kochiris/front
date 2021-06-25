@@ -28,10 +28,10 @@ const Buttons = (props) => {
   return (
     <div>
       <MuiThemeProvider theme={theme}>
-        <Fab onClick={onEdit} size="small" color="secondary" aria-label="edit" >
+        <Fab className='fab-edit' onClick={onEdit} size="small" color="secondary" aria-label="edit" >
           <EditIcon />
         </Fab>
-        <Fab onClick={onRemove} size="small" color="secondary" aria-label="edit" >
+        <Fab  className='fab-delete' onClick={onRemove} size="small" color="secondary" aria-label="edit" >
           <DeleteIcon />
         </Fab>
       </MuiThemeProvider>

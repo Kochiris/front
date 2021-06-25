@@ -12,7 +12,7 @@ body {
   background: linear-gradient(
     90deg,
     rgb(0, 255, 255) 0%,
-    rgba(100, 115, 255, 1) 100%
+    rgb(183, 255, 251) 100%
   );
 }
 .todo-app {
@@ -21,7 +21,7 @@ body {
   justify-content: start;
   width: 60vw;
   min-height: 600px;
-  background: #32373a;
+  background: #000c2b;
   text-align: center;
   margin: 128px auto;
   border-radius: 80px;
@@ -34,10 +34,7 @@ h1 {
   font-size: 24px;
 }
 
-.complete {
-  text-decoration: line-through;
-  opacity: 0.4;
-}
+
 
 .todo-form {
   margin-bottom: 32px;
@@ -94,7 +91,7 @@ h1 {
 
 .todo-row {
  
-  border:1px solid black ;
+  border: 1px solid rgb(27, 27, 27) ;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -129,4 +126,7 @@ h1 {
 
 .edit-icon {
   color: #fff;
+} 
+.fab-edit{
+  margin-right: 5px;
 }
