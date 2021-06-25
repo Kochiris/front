@@ -20,6 +20,10 @@ const edit = item => ({
     text: item.text,
     id: item.id
 });
+const edit2= item=>({
+    type: types.EDIT2,
+    text: item.text
+})
 
 
 // eslint-disable-next-line
@@ -27,5 +31,6 @@ export default {
     add,
     remove,
     re,
-    edit
+    edit,
+    edit2
 }

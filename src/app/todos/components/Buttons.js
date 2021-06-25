@@ -9,7 +9,7 @@ import actions from '../duck/actions';
 
 
 
-function Buttons(props) {
+const Buttons = (props) => {
   const theme = createMuiTheme({
     palette: {
       secondary: {
@@ -18,15 +18,20 @@ function Buttons(props) {
     }
   });
 
-
+  const onRemove = () => {
+    props.remove(props.todo);
+  }
+  const onEdit = () =>{
+    props.edit(props.todo);
+  }
 
   return (
     <div>
       <MuiThemeProvider theme={theme}>
-        <Fab size="small" color="secondary" aria-label="edit" >
+        <Fab onClick={onEdit} size="small" color="secondary" aria-label="edit" >
           <EditIcon />
         </Fab>
-        <Fab onClick={this.remove(props.todo)} size="small" color="secondary" aria-label="edit" >
+        <Fab onClick={onRemove} size="small" color="secondary" aria-label="edit" >
           <DeleteIcon />
         </Fab>
       </MuiThemeProvider>
@@ -34,9 +39,12 @@ function Buttons(props) {
   )
 };
 
-
-const mapDispatchToProps = dispatch => ({
-  remove: (todo) => dispatch(actions.remove(todo))
+const mapStateToProps = state => ({
 })
 
-export default connect(null, mapDispatchToProps)(Buttons)
+const mapDispatchToProps = dispatch => ({
+  remove: (todo) => dispatch(actions.remove(todo)),
+  edit: (todo) =>dispatch(actions.edit(todo))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Buttons)

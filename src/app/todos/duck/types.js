@@ -1,11 +1,11 @@
 const ADD = "ADD"
-const REMOVE= "REMOVE"
-const RE="RE"
-const EDIT="EDIT"
+const REMOVE = "REMOVE"
+const EDIT = "EDIT"
+const EDIT2= "EDIT2" //
 // eslint-disable-next-line
-export default{
+export default {
     ADD,
     REMOVE,
-    RE,
-    EDIT
+    EDIT,
+    EDIT2,
 }
