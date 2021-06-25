@@ -2,7 +2,7 @@ import types from './types'
 
 const TODOS = {
 
-    list: [{ text: "pierwsze", id: 0 }, { text: "drugie", id: 1 }],
+    list: [{ text: "Posprzątać pokój ", id: 0 }, { text: "Zrobić zadania rekrutacyjne", id: 1 }],
     id: 2,
     edit: { text: "", id: null }
 }
@@ -14,7 +14,7 @@ function todosReducer(state = TODOS, action) {
 
             return {
                 ...state,
-                list: [...state.list, { text: action.text, id: state.id}],
+                list: [...state.list, { text: action.text, id: state.id }],
                 id: state.id + 1
 
             }
@@ -22,7 +22,7 @@ function todosReducer(state = TODOS, action) {
             return ({
                 ...state,
                 list: [...state.list].filter(todo => todo.id !== action.id),
-                
+
             })
         case types.EDIT:
 
@@ -45,7 +45,7 @@ function todosReducer(state = TODOS, action) {
             }
 
 
-            
+
             return {
                 ...state,
                 list: arr,
